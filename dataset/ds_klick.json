@@ -1,0 +1,32 @@
+{
+	"name": "ds_klick",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Storage_Klick",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "1.csv",
+				"container": "prshcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ProductName",
+				"type": "String"
+			},
+			{
+				"name": "Salesdate",
+				"type": "String"
+			}
+		]
+	}
+}
